@@ -3,3 +3,4 @@ san.info
 *.log
 *.info
 test/
+.gitignore
