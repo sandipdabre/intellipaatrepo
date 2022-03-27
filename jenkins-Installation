@@ -1,0 +1,35 @@
+    1  git --version
+    2  cat /etc/os-release
+    3  yum install git -y
+    4  git --version
+    5  ls
+    6  yum install jenkins
+    7  yum install jenkins -y
+    8  yum install git -y
+    9  systemctl status jenkins.service
+   10  systemctl start jenkins.service
+   11  systemctl status jenkins.service
+   12  systemctl enable jenkins.service
+   13  systemctl status jenkins.service
+   14  systemctl start jenkins.service
+   15  journalctl -xe
+   16  which java
+   17  sudo amazon-linux-extras install java-openjdk11
+   18  which java
+   19  sudo yum install java-1.8.0-openjdk
+   20  java -version
+   21  yum install jenkins -y
+   22  systemctl start jenkins.service
+   23  yum autoremove jenkins -y
+   24  yum install jenkins -y
+   25  systemctl start jenkins.service
+   26  systemctl status jenkins.service
+   27  systemctl restart jenkins.service
+   28  systemctl status jenkins.service
+   29  ip r
+   30  ifconfig
+   31  systemctl enable jenkins.service
+   32  cat /var/lib/jenkins/secrets/initialAdminPassword
+   33  history
+   34  ip r
+   35  history
