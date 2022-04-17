@@ -1,0 +1,125 @@
+  101  #########################################################ANSIBLE
+  102  python --version
+  103  yum install epel-release -y
+  104  amazon-linux-extras install epel
+  105  yum install ansible -y
+  106  kill -9 1596
+  107  yum install ansible -y
+  108  ansible --version
+  109  ls /usr/share/ansible/plugins/modules
+  110  ls /usr/share/ansible/plugins/
+  111  ls /usr/lib/python2.7/site-packages/ansible
+  112  ls /usr/lib/python2.7/site-packages/ansible/modules/
+  113  cd /etc/ansible/
+  114  ls
+  115  ping 172.31.42.7
+  116  ping 172.31.10.164
+  117  ssh ec2-user@172.31.10.164
+  118  ssh ec2-user@172.31.42.7
+  119  cd
+  120  vim /etc/ssh/sshd_config
+  121  passwd
+  122  ssh root@172.31.42.7
+  123  ssh root@172.31.10.164
+  124  ssh root@172.31.42.7
+  125  ssh root@172.31.10.164
+  126  history
+  127  ping 172.31.42.7
+  128  ping 172.31.10.164
+  129  ansible --version
+  130  ls /etc/ansible/
+  131  ping node1
+  132  vim /etc/hosts
+  133  ping node1
+  134  ping node2
+  135  ssh root@node1
+  136  ssh root@node2
+  137  ls ~/.ssh/
+  138  ssh-keygen
+  139  ls ~/.ssh/
+  140  cat .ssh/id_rsa
+  141  ls ~/.ssh/
+  142  cat .ssh/id_rsa.pub
+  143  ls
+  144  ls ~
+  145  pwd
+  146  ls -a
+  147  ls .ssh/
+  148  ls ~/.ssh/
+  149  cd /tmp/
+  150  ls
+  151  ls .ssh/
+  152  ls ~/.ssh/
+  153  cd
+  154  ssh-copy-id root@172.31.42.7
+  155  ssh-copy-id root@node2
+  156  ssh root@node1
+  157  ssh root@node2
+  158  history
+  159  ls ~/.ssh/
+  160  cat .ssh/id_rsa.pub
+  161  ssh-keygen
+  162  ssh root@node2
+  163  ssh sandip@node2
+  164  cd /etc/ansible/
+  165  ls
+  166  pwd
+  167  ls
+  168  vim hosts
+  169  ls
+  170  vim ansible.cfg
+  171  ping node1
+  172  cat hosts
+  173  ansible -i /etc/ansible/hosts all -m ping
+  174  ansible -i hosts all -m ping
+  175  ansible -i hosts web -m ping
+  176  ansible -i hosts web,app -m ping
+  177  ansible -i hosts web -m ping
+  178  ansible web -m ping
+  179  cat /etc/os-release
+  180  ansible 172.31.10.164 -m shell -a "cat /etc/os-release"
+  181  ansible 172.31.10.164 -m command -a "cat /etc/os-release"
+  182  ansible-doc -l
+  183  ansible-doc -l |wc -l
+  184  ansible-doc shell
+  185  ansible-doc ping
+  186  ansible-doc copy
+  187  cd
+  188  ls
+  189  touch cred.txt
+  190  ls
+  191  pwd
+  192  cp /root/cred.txt /tmp/
+  193  ls /tmp/
+  194  ansible node1 -m copy -a "src=/root/cred.txt dest=/tmp"
+  195  ansible node2 -m copy -a "src=/root/cred.txt dest=/tmp"
+  196  ls
+  197  vim cred.txt
+  198  ansible node2 -m copy -a "src=/root/cred.txt dest=/tmp"
+  199  mkdir data
+  200  ls
+  201  mkdir data
+  202  touch file1
+  203  ansible node2 -m file -a "path=/tmp/mydata state=directory"
+  204  mkdir data
+  205  ansible-doc file
+  206  ansible-doc dir
+  207  ansible web -m yum -a "name=httpd state=present"
+  208  ls /tmp/
+  209  cd /tmp/testdata/
+  210  ls
+  211  wget https://www.free-css.com/assets/files/free-css-templates/download/page277/cads.zip
+  212  ls
+  213  unzip cads.zip
+  214  ls
+  215  ls cads
+  216  ls
+  217  cd cads/
+  218  ls
+  219  pwd
+  220  ansible web -m copy -a "src=/tmp/testdata/cads/ dest=/var/www/html/"
+  221  ansible-doc service
+  222* ansible web -m service -a "name=httpd state=started"
+  223  ansible -m user -a "name=testuser1 password=test@123" node2
+  224  ansible-doc user
+  225  history
