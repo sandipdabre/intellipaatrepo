@@ -1,0 +1,21 @@
+---
+- hosts: web
+  become: true
+  become_user: root
+
+  tasks:
+  - name: Install Apache/ Httpd
+    yum:
+      name: httpd
+      state: latest
+
+  - name: Copy Index file
+    copy:
+      src: /root/Ansible-Play/index.html
+      dest: /var/www/html
+
+  - name: Restart Httpd Service
+    service:
+      name: httpd
+      state: restarted
+      enabled: yes
