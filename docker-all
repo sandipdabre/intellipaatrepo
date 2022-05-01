@@ -1,0 +1,221 @@
+  396  yum install -y docker-ce docker-ce-cli containerd.io
+  397  yum search docker
+  398  yum install docker -y
+  399  docker --version
+  400  history
+  401  ########################################################
+  402  docker images
+  403  systemctl status docker
+  404  systemctl start docker
+  405  systemctl status docker
+  406  systemctl enable docker
+  407  docker images
+  408  docker search ubuntu
+  409  docker images
+  410  docker pull ubuntu
+  411  docker images
+  412  docker pull hello-world
+  413  docker images
+  414  docker search alpine
+  415  docker pull alpine
+  416  docker images
+  417  docker inspect feb5d9fea6a5
+  418  docker images
+  419  docker inspect d2e4e1f51132
+  420  docker rmi hello-world
+  421  docker images
+  422  history
+  423  docker images
+  424  docker run -d ubuntu
+  425  ps -ef
+  426  ps
+  427  docker ps
+  428  docker ps -a
+  429  docker start c7608cf3a5ce
+  430  docker ps
+  431  docker ps -a
+  432  docker start c7608cf3a5ce bash
+  433  docker run -itd ubuntu
+  434  docker ps
+  435  docker ps -a
+  436  docker exec -it f696ded31228 bash
+  437  cat /etc/os-release
+  438  docker ps
+  439  docker attach -it f696ded31228 bash
+  440  docker attach f696ded31228 bash
+  441  docker attach -t f696ded31228 bash
+  442  docker attach --help
+  443  docker attach f696ded31228
+  444  docker ps
+  445  docker ps -a
+  446  docker start f696ded31228
+  447  docker ps
+  448  docker attach f696ded31228
+  449  docker ps
+  450  docker inspect f696ded31228
+  451  docker images
+  452  docker run -d -P tomcat bash
+  453  docker ps -a
+  454  docker images
+  455  docker run -itd -P tomcat bash
+  456  docker ps -a
+  457  docker ps
+  458  docker run -it -p 8989:8080 tomcat bash
+  459  docker ps
+  460  docker run -itd -P wordpress
+  461  docker ps
+  462  docker run -itd -P nginx
+  463  docker ps
+  464  history
+  465  docker images
+  466  docker ps
+  467  docker images
+  468  docker rmi fa5269854a5e
+  469  docker ps |grep a0f906597779
+  470  docker rm a0f906597779
+  471  docker stop a0f906597779
+  472  docker rm a0f906597779
+  473  docker ps |grep a0f906597779
+  474  docker ps
+  475  docker rmi fa5269854a5e
+  476  docker images
+  477  docker rm -f 7a61b3dc03de
+  478  docker ps
+  479  docker rm -f f696ded31228
+  480  docker ps
+  481  docker rm -f 37cb4954eda0
+  482  docker rm -f e7551ff7d5ce
+  483  docker ps
+  484  docker images
+  485  docker rmi *
+  486  docker rmi 0ac33e5f5afa
+  487  docker rmi b44d413c437a
+  488  docker images
+  489  docker rmi 0183eb12bb0c
+  490  docker ps -a
+  491  docker rm c7608cf3a5ce
+  492  docker rm 836d64860edb
+  493  ls
+  494  docker ps -a
+  495  docker ps
+  496  docker images
+  497  docker rmi 0183eb12bb0c
+  498  ls
+  499  docker images
+  500  docker search nginx
+  501  docker run -it nginx -P bash
+  502  docker run -it nginx -P
+  503  docker ps
+  504  docker run -itd nginx -P
+  505  docker ps
+  506  docker ps -a
+  507  docker run -itd -P nginx
+  508  docker ps -a
+  509  docker ps
+  510  docker exec fddc75ca528d
+  511  docker exec fddc75ca528d bash
+  512  docker exec -it fddc75ca528d bash
+  513  docker ps
+  514  docker ps -a
+  515  docker start fddc75ca528d
+  516  docker ps
+  517  docker exec -it fddc75ca528d bash
+  518  docker ps
+  519  docker rename fddc75ca528d my-nginx
+  520  docker ps
+  521  history
+  522  docker images
+  523  docker inspect fa5269854a5e
+  524  docker images
+  525  docker inspect d2e4e1f51132
+  526  docker inspect fa5269854a5e
+  527  docker run -d -p 9090:80 --name nginx-test nginx
+  528  docker ps
+  529  docker run -d -p 9090:80 --name nginx-test1 nginx
+  530  docker ps
+  531  docker stop 7bf46b25f87c
+  532*
+  533  docker run -d -p 9090:80 --name nginx-test1 nginx
+  534  docker ps -a
+  535  docker run -d -p 9191:80 --name Rhel-Centos centos
+  536  docker ps
+  537  docker ps -a
+  538  docker exec -it 8bc75d4b5451 bash
+  539  docker start 8bc75d4b5451
+  540  docker exec -it 8bc75d4b5451 bash
+  541  docker ps -a
+  542  docker ps
+  543  #docker run -it -p 9191:80 --name Rhel-Centos centos
+  544  docker rm 8bc75d4b5451
+  545  docker run -it -p 9191:80 --name Rhel-Centos centos
+  546  docker ps
+  547  docker ps -a
+  548  docker ps
+  549  docker restart fddc75ca528d
+  550  docker ps
+  551  docker image
+  552  docker images
+  553  docker ps
+  554  docker inspect fddc75ca528d
+  555  top
+  556  docker stats
+  557  docker ps
+  558  docker stats
+  559  docker ps
+  560  docker exec -it fddc75ca528d bash
+  561  docker ps
+  562  docker images
+  563  docker commit -m "Nginx is modified with Intellipaat" fddc75ca528d mynginxintel:v1
+  564  docker images
+  565  docker run -itd -p 9898:80 mynginxintel
+  566  docker run -itd -p 9898:80 mynginxintel:v1
+  567  docker ps
+  568  docker exec -it 1ab7f8c25ded bash
+  569  docker ps
+  570  docker login
+  571  docker images
+  572  docker push mynginxintel:v1
+  573  docker tag mynginxintel:v1 sandysdocker/mynginxintel:v1
+  574  docker images
+  575  docker push sandysdocker/mynginxintel
+  576  docker push sandysdocker/mynginxintel:v1
+  577  history
+  578  ls /var/lib/jenkins/workspace/PaaC/target/
+  579  vi dockerfile
+  580  ls
+  581  cat dockerfile
+  582  docker images
+  583  docker build -f dockerfile -t ubuntu-nginx:v1
+  584*
+  585  docker images
+  586  docker ps
+  587  docker run -itd -P 98e493e3d8c0
+  588  docker ps
+  589  cat dockerfile
+  590  docker ps
+  591  docker exec -it f1633e585c2c bash
+  592  docker ps
+  593  vim dockerfile
+  594  docker build -f dockerfile -t ubuntu-nginx:v2
+  595  docker build -f dockerfile -t ubuntu-nginx:v2 .
+  596  docker images
+  597  docker run -itd -P ab3e567d65c4
+  598  docker ps
+  599  docker exec -it aae917a7936b bash
+  600  vim dockerfile
+  601* ls /var/lib/jenkins/workspace/PaaC/target/sampleapp.war
+  602  vim appdockerfile
+  603  vim dockerfile
+  604  vim appdockerfile
+  605  docker build -f appdockerfile -t myapplication:v1 .
+  606  docker build -f appdockerfile -t myapplication:v1 /var/lib/jenkins/workspace/PaaC/target/
+  607  docker images
+  608  vim appdockerfile
+  609  docker build -f appdockerfile -t myapplication:v1 /var/lib/jenkins/workspace/PaaC/target/
+  610  cat appdockerfile
+  611  docker images
+  612  docker run -itd -p 9999:8080 b4028b93b131 bash
+  613  docker ps
+  614  docker exec -it 7172bd356371 bash
+  615  docker images
+  616  history
